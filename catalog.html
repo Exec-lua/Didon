@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog | Didon</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="header-container">
+                    <a href="./index.html" class="brand">
+  <svg
+    viewBox="0 0 108 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <text
+      x="0"
+      y="18"
+      fill="white"
+      font-size="20"
+      font-family="Didot, 'Didot LT STD', 'Bodoni MT', serif"
+      letter-spacing="0.15em"
+    >
+      DIDON
+    </text>
+  </svg>
+</a>
+
+          <div class="burger">
+            <div class="burger-line-wrapper">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </div>
+          </div>
+
+          <div class="menu">
+            <div class="menu-header">
+              <a href="#" class="brand">
+  <svg
+    viewBox="0 0 108 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <text
+      x="0"
+      y="18"
+      fill="white"
+      font-size="20"
+      font-family="Didot, 'Didot LT STD', 'Bodoni MT', serif"
+      letter-spacing="0.15em"
+    >
+      DIDON
+    </text>
+  </svg>
+</a>
+              <div class="burger is-active close-menu">
+                <div class="burger-line-wrapper">
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="menu-inner">
+              <li class="menu-itme">
+                <a href="catalog.html" class="menu-link">Catalogue</a>
+              </li>
+              <li class="menu-itme">
+                <a href="#" class="menu-link">Contact</a>
+              </li>
+              <li class="menu-itme">
+                <a href="#" class="menu-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-block">
+          </div>
+        </div>
+      </nav>
+      <div class="header-backdrop"></div>
+    </header>
+
+    <main>
+      <section class="catalog-hero">
+        <div class="container">
+          <div class="catalog-hero-content">
+            <h5 class="catalog-subtitle">
+              <span>Our Collection</span>
+            </h5>
+            <h1 class="catalog-title">Explore Our Catalog</h1>
+            <p class="catalog-description">
+              Discover our premium selection of products designed for your adventures
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+  <section class="marquee-section">
+
+    <div class="marquee-horizontal-large">
+      <div class="track-horizontal flex-horizontal">
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img320.png" class="icon">
+        </div>
+
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img295.png" class="icon">
+        </div>
+
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img284.png" class="icon">
+        </div>
+        <div class="spacer-30"></div>
+        
+        <div class="icon-container-alt">
+          <img src="./images/Items/img273.png" class="icon">
+        </div>
+
+        <div class="spacer-30"></div>
+
+        <!-- DUPLICATE FOR LOOP -->
+        <div class="icon-container-alt">
+          <img src="./images/Items/img247.png" class="icon">
+        </div>
+
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img273.png" class="icon">
+        </div>
+
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img311.png" class="icon">
+        </div>
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img320.png" class="icon">
+        </div>
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img295.png" class="icon">
+        </div>
+        <div class="spacer-30"></div>
+
+        <div class="icon-container-alt">
+          <img src="./images/Items/img284.png" class="icon">
+        </div>
+      </div>
+    </div>
+
+    <!-- EDGE FADE -->
+    <div class="marquee-cover-horizontal"></div>
+
+  </section>
+
+      <section class="catalog-section">
+        <div class="container">
+          <div class="catalog-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="category1">Sanabel</button>
+            <button class="filter-btn" data-filter="category2">Warda</button>
+            <button class="filter-btn" data-filter="category3">Zina</button>
+            <button class="filter-btn" data-filter="category3">Cap D'or</button>
+            <button class="filter-btn" data-filter="category3">Lebhour</button>
+            <button class="filter-btn" data-filter="category3">Helva</button>
+
+          </div>
+
+          <div class="catalog-grid" id="catalogGrid">
+            <div class="catalog-item" data-category="category1">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="product-float">
+                  <img 
+                    src="./images/Items/img623.png" 
+                    alt="Cube Pro"
+                    class="product-image"
+                  />
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Pro</h3>
+                <p class="catalog-item-description">Premium quality product for your adventures</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$99.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category2">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Air</h3>
+                <p class="catalog-item-description">Lightweight design for maximum comfort</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$149.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category1">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Max</h3>
+                <p class="catalog-item-description">Maximum performance and durability</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$79.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category3">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Elite</h3>
+                <p class="catalog-item-description">Professional grade equipment</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$199.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category2">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Sport</h3>
+                <p class="catalog-item-description">Perfect for active lifestyles</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$129.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category1">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Basic</h3>
+                <p class="catalog-item-description">Essential features at great value</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$89.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category3">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Premium</h3>
+                <p class="catalog-item-description">Luxury design with advanced features</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$179.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category2">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Cube Ultra</h3>
+                <p class="catalog-item-description">Top-tier performance and style</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$159.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog-item" data-category="category1">
+              <div class="stage">
+                <div class="plate"></div>
+                <div class="product-float">
+                  <img src="./images/zina-harissa.png" alt="Zina Harissa du Cap Bon" class="product-image" />
+                </div>
+              </div>
+              <div class="catalog-item-content">
+                <h3 class="catalog-item-title">Zina Harissa du Cap Bon</h3>
+                <p class="catalog-item-description">100% naturel - Fort de Kélibia</p>
+                <div class="catalog-item-footer">
+                  <span class="catalog-item-price">$9.99</span>
+                  <button class="catalog-item-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-column footer-column-logo">
+            <div class="footer-logo">
+              <a href="index.html">
+                <svg
+                  width="108"
+                  height="24"
+                  viewBox="0 0 108 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_71)">
+                    <path
+                      d="M0.96 23H9.856V22.552C6.656 22.136 5.696 20.792 5.696 17.56V2.872H5.888L14.208 23.032H15.36L22.816 2.872H22.976V20.728C22.976 22.008 22.176 22.456 19.904 22.552V23H30.944V22.552C28.256 22.456 27.616 21.944 27.616 20.728V2.968C27.616 1.752 28.256 1.208 30.944 1.112V0.695999H22.784L16.736 17.144H16.576L9.984 0.695999H0.96V1.112C3.712 1.176 4.896 2.648 4.896 4.568V17.56C4.896 20.792 3.968 22.168 0.96 22.552V23Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M52.128 23.352H53.664V6.104C53.664 2.936 54.528 1.56 57.536 1.112V0.695999H48.448V1.112C51.68 1.496 52.864 2.936 52.864 6.104V16.728H52.832L40.512 0.695999H32.96V1.112C35.712 1.24 36.896 2.872 36.896 4.824V17.56C36.896 20.792 35.968 22.168 32.96 22.552V23H41.984V22.552C38.72 22.2 37.696 20.792 37.696 17.56V4.728H37.728L52.128 23.352Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M63.6 23H75.696V22.552C72.848 22.488 71.984 21.944 71.984 20.728V1.272H72.752C75.216 1.272 77.136 3.736 79.376 8.088L79.856 8.024L79.696 0.695999H59.568L59.376 8.024L59.856 8.088C62.128 3.64 64.08 1.272 66.512 1.272H67.312V20.728C67.312 21.944 66.416 22.488 63.6 22.552V23Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M102.128 23.352H103.664V6.104C103.664 2.936 104.528 1.56 107.536 1.112V0.695999H98.448V1.112C101.68 1.496 102.864 2.936 102.864 6.104V16.728H102.832L90.512 0.695999H82.96V1.112C85.712 1.24 86.896 2.872 86.896 4.824V17.56C86.896 20.792 85.968 22.168 82.96 22.552V23H91.984V22.552C88.72 22.2 87.696 20.792 87.696 17.56V4.728H87.728L102.128 23.352Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_71">
+                      <rect width="108" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-copy">
+              Get out there & discover your next <br> slope, mountain & destination!
+            </div>
+
+            <div class="footer-copy-rights">Copyright 2026 Didon, Inc. Terms & Privacy</div>
+          </div>
+          <div class="footer-column footer-column-link">
+            <h4 class="footer-heading">More on The Blog</h4>
+            <ul class="footer-links-list">
+              <li class="footer-links-item">
+                <a href="#">About MNTN</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Contributors & Writers</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Write For Us</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Contact Us</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-link">
+            <h4 class="footer-heading">More on DIDON</h4>
+            <ul class="footer-links-list">
+              <li class="footer-links-item">
+                <a href="#">The Team</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Jobs</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="#">Press</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/catalog.js"></script>
+  </body>
+</html>
