@@ -14,16 +14,25 @@
   --text-dark: #1d1d1f;
   --text-muted: #6e6e73;
 }
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  height: -webkit-fill-available;
+  min-height: 100vh;
+  overflow-x: visible;
   color: #5e6282;
   background-color: #1f1d1d;
   
 }
+
 .catalog-hero {
   padding: 150px 0 80px;
   background: linear-gradient(180deg, rgba(59, 57, 57, 0.8), #1f1d1d);
@@ -752,5 +761,15 @@ img {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .catalog-item:hover .cube,
+  .catalog-item:hover .plate,
+  .catalog-item:hover .product-image,
+  .catalog-item:hover .product-float {
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
