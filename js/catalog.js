@@ -1,35 +1,30 @@
-// Catalog Page JavaScript
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const catalogItems = document.querySelectorAll('.catalog-item');
 
-  // Filter functionality
   filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
       const filter = this.getAttribute('data-filter');
 
-      // Update active button
       filterButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
 
-      // Filter items
       catalogItems.forEach(item => {
-        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+        const match =
+          filter === 'all' ||
+          item.getAttribute('data-category') === filter;
+
+        if (match) {
           item.classList.remove('hide');
-          // Add fade-in animation
           item.style.opacity = '0';
-          setTimeout(() => {
+          requestAnimationFrame(() => {
             item.style.transition = 'opacity 0.3s ease';
             item.style.opacity = '1';
-          }, 10);
+          });
         } else {
           item.classList.add('hide');
         }
       });
     });
   });
-
-
 });
-
