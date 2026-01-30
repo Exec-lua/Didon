@@ -28,13 +28,12 @@ body {
   
 }
 
-body.overflow-hidden {
+#app.no-scroll {
   overflow: hidden;
+  height: 100%;
 }
 
-main {
-  overflow: hidden;
-}
+
 
 a,
 button {
