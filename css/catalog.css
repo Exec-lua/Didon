@@ -1,0 +1,558 @@
+/* ============================================================
+   DIDON CATALOG — LUXURY HYBRID (APPLE × TUNISIAN WARMTH)
+   Clean, editorial, premium, calm, modern
+   ============================================================ */
+
+/* PAGE COLORS — match home: #371010, #fbd784, #FF8C42 */
+:root {
+  --burgundy: #371010;
+  --burgundy-dark: #4a1414;
+  --gold: #fbd784;
+  --accent: #FF8C42;
+  --white: #ffffff;
+  --off-white: #faf8f6;       /* warm off-white, not cool gray */
+  --text-dark: #1a1512;       /* warm dark */
+  --text-muted: #5c534d;       /* warm gray */
+  --shadow-soft: 0 8px 30px rgba(92, 26, 26, 0.08);
+  --shadow-lift: 0 20px 50px rgba(92, 26, 26, 0.15);
+}
+
+/* Match main page: white around the card, red only inside .catalog-card */
+body {
+  background: #f5f5f5;
+  filter: brightness(0.95);
+}
+
+/* CATALOG PAGE NAVBAR — smaller padding than home page */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 24px 0 !important;
+  }
+
+  .on-scroll .navbar {
+    padding: 16px 0 !important;
+  }
+}
+
+
+
+/* Reduce overall brightness on catalog page (similar to index) */
+main,
+.catalog-hero,
+.catalog-card,
+.catalog-section,
+.marquee-section {
+  filter: brightness(0.98);
+}
+
+/* ============================================================
+   HERO SECTION — EDITORIAL, CALM, PREMIUM
+   ============================================================ */
+
+.catalog-hero {
+  padding: 80px 0 40px;
+  text-align: center;
+  position: relative;
+  background: #371010
+}
+
+.catalog-subtitle {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+font-family: Arial, Helvetica, sans-serif;}
+
+.catalog-subtitle span {
+  opacity: 0.9;
+}
+
+.catalog-subtitle::before {
+  content: "";
+  height: 2px;
+  width: 40px;
+  background-color: var(--accent);
+  display: inline-block;
+}
+
+.catalog-title {
+  font-size: 52px;
+  font-family: "Bentham", serif;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.catalog-description {
+  font-size: 18px;
+  color: rgba(251, 215, 132, 0.9);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Hint above filter bar — "Scroll left" on mobile */
+.catalog-filter-hint {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+
+.catalog-filter-hint::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 6px solid var(--gold);
+  animation: catalog-hint-arrow 1.5s ease-in-out infinite;
+}
+
+@keyframes catalog-hint-arrow {
+  0%, 100% { transform: translateX(0); opacity: 0.8; }
+  50% { transform: translateX(-4px); opacity: 1; }
+}
+
+#catalog-filters {
+  scroll-margin-top: 100px;
+}
+
+/* ============================================================
+   FILTER BAR — RESPONSIVE LUXURY CHIPS
+   ============================================================ */
+
+.catalog-filters-wrapper {
+  width: 100%;
+  margin: 48px 0 40px;
+  padding: 0 4px;
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: rgba(92, 26, 26, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+/*   border: 1px solid rgba(251, 215, 132, 0.2);
+ */  box-shadow: 0 18px 50px rgba(92, 26, 26, 0.4);
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(251, 215, 132, 0.25);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-btn:hover {
+  background: rgba(251, 215, 132, 0.15);
+  color: #ffffff;
+  border-color: rgba(251, 215, 132, 0.4);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(255, 140, 66, 0.45);
+}
+
+/* ============================================================
+   PRODUCT GRID — CLEAN, AIRY, APPLE-LIKE
+   ============================================================ */
+
+.catalog-section {
+  padding: 32px 0 80px;
+}
+
+/* Same card wrapper as main page .hero-card — burgundy to black like home */
+.catalog-card {
+  width: min(1800px, 95vw);
+  margin: 40px auto 80px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  position: relative;
+  background: linear-gradient(to bottom, #371010 0%, #0e0203 100%);
+}
+
+.catalog-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* ============================================================
+   PRODUCT CARD — LUXURY, MINIMAL, PREMIUM
+   ============================================================ */
+
+.catalog-item {
+  background: var(--white);
+  border-radius: 26px;
+  padding: 28px;
+  border: 1px solid rgba(92, 26, 26, 0.08);
+  box-shadow: var(--shadow-soft);
+  transition:
+    opacity .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.catalog-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(92, 26, 26, 0.12);
+}
+
+.catalog-item.hide {
+  display: none !important; /* remove from layout so grid reflows */
+  pointer-events: none;
+}
+
+/* PRODUCT STAGE — FLOATING PLATE */
+.stage {
+  position: relative;
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  perspective: 900px;
+  margin-bottom: 8px;
+}
+
+.plate {
+  width: 72%;
+  height: 26px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 10%, rgba(255,252,248,0.95), rgba(250,245,240,0.9)),
+    radial-gradient(circle at 50% 120%, rgba(92, 26, 26, 0.12), transparent 70%);
+  box-shadow:
+    0 10px 30px rgba(92, 26, 26, 0.1),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.product-float {
+  position: absolute;
+  bottom: 22px;
+  transform-style: preserve-3d;
+  transition:
+    transform .45s ease,
+    filter .45s ease;
+}
+
+.catalog-item:hover .product-float {
+  transform: translateY(-12px) rotateX(6deg);
+  filter: drop-shadow(0 26px 55px rgba(0,0,0,0.20));
+}
+
+/* PRODUCT IMAGE */
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+  transition: transform .3s ease;
+}
+
+.catalog-item:hover .product-image {
+  transform: translateY(-10px);
+}
+
+/* PRODUCT TEXT */
+.catalog-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.catalog-item-description {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.catalog-item-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: auto;
+}
+
+.catalog-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.catalog-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.catalog-item-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: var(--burgundy);
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(92, 26, 26, 0.25);
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.catalog-item-btn::after {
+  content: "→";
+  font-size: 12px;
+  transform: translateY(1px);
+}
+
+.catalog-item-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(255, 140, 66, 0.4);
+}
+
+.catalog-item-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(92, 26, 26, 0.2);
+}
+
+/* ============================================================
+   SPONSORSHIP MARQUEE — LUXURY VERSION
+   ============================================================ */
+
+.marquee-section {
+  position: relative;
+  min-height: 180px;
+  overflow: hidden;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  background: #371010
+}
+
+.marquee-horizontal-large {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 100vw;
+}
+
+.flex-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.track-horizontal,
+.track-horizontal-alt {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  white-space: nowrap;
+  will-change: transform;
+  opacity: 0.9;
+}
+
+.track-horizontal {
+  animation: marquee-horizontal 40s linear infinite;
+}
+
+.track-horizontal-alt {
+  animation: marquee-horizontal-alt 40s linear infinite;
+}
+
+/* LUXURY EDGE FADE — burgundy tint to match card */
+.marquee-cover-horizontal {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(90deg, #371010 0%, transparent 18%),
+    linear-gradient(270deg, #371010 0%, transparent 18%);
+}
+
+/* SPONSOR CARD — gold border, warm glass */
+.icon-container-alt {
+  width: 220px;
+  height: 140px;
+  padding: 26px;
+  border-radius: 20px;
+  background:
+    linear-gradient(140deg, rgba(251, 215, 132, 0.12), rgba(92, 26, 26, 0.08));
+/*   border: 1px solid rgba(251, 215, 132, 0.4);
+ */ 
+  box-shadow: 0 20px 50px rgba(92, 26, 26, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transition: transform .3s ease;
+}
+
+.icon-container-alt:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+.spacer-30 {
+  width: 30px;
+  flex: 0 0 30px;
+}
+
+/* MARQUEE ANIMATIONS */
+@keyframes marquee-horizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-horizontal-alt {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .catalog-card {
+    width: 95vw;
+    margin: 10px auto 60px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  .catalog-title { font-size: 38px; }
+  .catalog-description { font-size: 16px; }
+
+  .catalog-filters-wrapper {
+    margin: 32px 0 28px;
+    padding: 0 16px;
+  }
+
+  .catalog-filter-hint {
+    display: flex;
+  }
+
+  .catalog-filters {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 12px 16px;
+    gap: 8px;
+    border-radius: 16px;
+  }
+
+  .catalog-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex: 0 0 auto;
+    padding: 10px 18px;
+    font-size: 11px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .marquee-section {
+    min-height: 150px;
+    padding: 16px 0;
+  }
+
+  .icon-container-alt {
+    width: 170px;
+    height: 110px;
+    padding: 18px;
+  }
+
+  /* Navbar on catalog mobile: above content, safe area, always readable */
+  .header {
+    z-index: 100;
+  }
+
+  .header .navbar {
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: 16px;
+  }
+
+  .header .header-container {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+  }
+
+  .menu {
+    z-index: 101;
+    padding-top: env(safe-area-inset-top);
+  }
+}
